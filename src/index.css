@@ -1,0 +1,102 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Core Colors */
+  --bg-base: #F5F6FA;
+  --bg-white: #FFFFFF;
+  --bg-subtle: #F0F1F7;
+  --bg-muted: #E8EAF2;
+
+  /* Brand */
+  --brand-primary: #2563EB;
+  --brand-primary-light: #EFF6FF;
+  --brand-primary-mid: #DBEAFE;
+  --brand-success: #16A34A;
+  --brand-success-light: #F0FDF4;
+  --brand-warning: #D97706;
+  --brand-warning-light: #FFFBEB;
+  --brand-danger: #DC2626;
+  --brand-danger-light: #FEF2F2;
+  --brand-info: #0891B2;
+  --brand-info-light: #ECFEFF;
+  --brand-purple: #7C3AED;
+  --brand-purple-light: #F5F3FF;
+
+  /* Text */
+  --text-primary: #0F1729;
+  --text-secondary: #4B5675;
+  --text-muted: #8B95B0;
+  --text-disabled: #C1C8D9;
+
+  /* Borders */
+  --border-default: #E2E6F0;
+  --border-strong: #C8CEE0;
+
+  /* Sidebar */
+  --sidebar-bg: #0F1729;
+  --sidebar-text: #8B95B0;
+  --sidebar-text-active: #FFFFFF;
+  --sidebar-active-bg: rgba(37,99,235,0.15);
+  --sidebar-hover: rgba(255,255,255,0.05);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15,23,41,0.06);
+  --shadow-sm: 0 2px 8px rgba(15,23,41,0.08);
+  --shadow-md: 0 4px 16px rgba(15,23,41,0.10);
+  --shadow-lg: 0 8px 32px rgba(15,23,41,0.12);
+
+  /* Radius */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 9999px;
+
+  /* Fonts */
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  /* Sidebar width */
+  --sidebar-width: 260px;
+  --header-height: 64px;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.fade-in { animation: fadeIn 0.3s ease forwards; }
+.slide-in { animation: slideIn 0.25s ease forwards; }
